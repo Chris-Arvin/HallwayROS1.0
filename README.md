@@ -1,2 +1,2 @@
 # HallwayROS1.0
-A simulation platform &amp; benchmark for hallway scene
+The related work will be released after the paper is accepted
