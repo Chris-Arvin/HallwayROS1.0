@@ -3,12 +3,19 @@
 <div align=center>
 <img src="https://user-images.githubusercontent.com/36269534/157357452-38999f68-f6a8-46b6-86c7-529d02370c69.png" width="700"/>
 </div>
+
 * The pedestrian simulation is extended from [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros). We complete it, providing three optional person drivers: data replay, extended social force model, and manual control.
 * The navigation simulation is extended from [move_base](https://github.com/ros-planning/navigation), a powerful ROS navigation stack. We simplify some existing algorithms and propose a participant-game-based algorithm. They are all adapted to our simulation platform. 
 
 ## Table of Contents
 * [Installation](#1-Installation)
 * [Quick Start](#2-Quick-Start)
+* [Instuction](#3-Introduction-for-Key-Parameters-and-Key-Topics)
+* [More Examples](#4-More-Examples)
+* [How to DIY](#5-Instructions-to-DIY)
+* [Contributors](#6-Contributors)
+* [Acknowledgement](#7-Acknowledgement)
+* [Apology](#8-Apology)
 
 ## 1. Installation
 The project has been tested on Ubuntu 16.04 (ROS Kinetic) and 18.04 (ROS Melodic). We highly recommend using Ubuntu 18.04 since Ubuntu 16.04 will no longer be supported after April 2021. In the following we will take ROS Melodic version as the example. Please install some dependence firstly: 
@@ -127,10 +134,7 @@ When using the data replay, please change the **scene_file** in **pedsim_simulat
 * Jingtai Liu
 
 ## 7. Acknowledgement
+These packages have been developed from [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros) and [move_base](https://github.com/ros-planning/navigation). Thanks again to support our work.
 
-
-
-
-
-
+## 8. Apology
 **We are so sorry: to avoid duplicate checks and data leakage, the whole work will be released after the paper is reviewed.**
