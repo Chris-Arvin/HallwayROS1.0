@@ -1,6 +1,8 @@
 # HallwayROS1.0
 
-![architecture2](https://user-images.githubusercontent.com/36269534/157357452-38999f68-f6a8-46b6-86c7-529d02370c69.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/36269534/157357452-38999f68-f6a8-46b6-86c7-529d02370c69.png" width="700"/>
+</div>
 * The pedestrian simulation is extended from [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros). We complete it, providing three optional person drivers: data replay, extended social force model, and manual control.
 * The navigation simulation is extended from [move_base](https://github.com/ros-planning/navigation), a powerful ROS navigation stack. We simplify some existing algorithms and propose a participant-game-based algorithm. They are all adapted to our simulation platform. 
 
@@ -34,8 +36,10 @@ $ source HallwayROS_ws/devel/setup.bash
 $ roslaunch move_base_bridge move_base_bridge.launch
 ```
 There will be an interface to help you control the pedestrians as well as the robot. And you can have a glance to this simulation platform
-![Screenshot from 2022-03-09 10-11-00](https://user-images.githubusercontent.com/36269534/157365577-70856fbb-ad9f-442b-a94f-005d3d043136.png)
-<img src="https://user-images.githubusercontent.com/36269534/157365577-70856fbb-ad9f-442b-a94f-005d3d043136.png" width="200" height="200" alt="微信小程序"/><br/>
+<div align=center>
+<img src="https://user-images.githubusercontent.com/36269534/157365577-70856fbb-ad9f-442b-a94f-005d3d043136.png" width="700"/>
+</div>
+
 
 ## 3. Introduction for Key Parameters and Key Topics
 @param: person_mode:
@@ -65,7 +69,7 @@ $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=1 robot_mode:=
 ```
 $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=0 robot_mode:=2
 ```
-note:
+>note:
 * We provide 125 recorded data to help you test your algorithm. 
 * You can easily create your own recorded data according to [Instructions to DIY](#5-Instructions to DIY)
 #### Case3: drive the robot with extended social force
