@@ -69,7 +69,7 @@ $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=1 robot_mode:=
 ```
 $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=0 robot_mode:=2
 ```
->note:
+note:
 * We provide 125 recorded data to help you test your algorithm. 
 * You can easily create your own recorded data according to [Instructions to DIY](#5-Instructions to DIY)
 #### Case3: drive the robot with extended social force
@@ -85,9 +85,27 @@ note:
 * Also, you can adapt your own algorithm in the format of the plugin. The details about the plugin can be found at [how to create a plugin](http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using%20a%20Simple%20Plugin)
 
 ## 5. Instructions to DIY
+#### DIY for simulation environment
+We allow users to build its simulation environment in the format of xxx.xml. A reference xml file can be found at **Example_env.xml**. 
+Slam for the environment is not necessary, because we bridge the auto map-sending function. 
+You can create obstacles in your .xml file like:
+```
+<obstacle x1="1" y1="10" x2="5" y2="20" type="line">
+<obstacle x="5" y="5" xHalfLength="2" yHalfLength="1.5" type="rectangle">
+```
+And you can use your environment to change **scene_file** in **pedsim_simulator.launch**
+
+#### Create a new recorded data
+Firstly, you should open the environment according to [Quick Start](#2-Quick-Start).
+Next, open another terminal to record the keyborad input:
+```
+$ rosbag record 
+```
+
+
 
 ## 6. Contributors
-* Qianyi Zhang 
+* Qianyi Zhang  zhangqianyi@mail.nankai.edu.cn
 * Yinuo Song
 * Zhengxi Hu
 * Shilei Cheng
@@ -100,12 +118,4 @@ note:
 
 
 
-
-
-
-
-
-
-
-
-The whole work will be released after the paper is accepted
+** We are so sorry: to avoid duplicate checks and data leakage, the whole work will be released after the paper is reviewed **
