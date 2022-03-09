@@ -1,8 +1,9 @@
 # HallwayROS1.0
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/36269534/157357452-38999f68-f6a8-46b6-86c7-529d02370c69.png" width="700"/>
-</div>
+
+<a href="https://www.youtube.com/watch?v=BmNAfd1a4SE" target="_blank"><div align=center><img src="https://user-images.githubusercontent.com/36269534/157377529-28766afb-522b-4290-96a6-e5d5e88fb56f.png" 
+width="700"  border="10" /></div></a>
+
 
 * The pedestrian simulation is extended from [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros). We complete it, providing three optional person drivers: data replay, extended social force model, and manual control.
 * The navigation simulation is extended from [move_base](https://github.com/ros-planning/navigation), a powerful ROS navigation stack. We simplify some existing algorithms and propose a participant-game-based algorithm. They are all adapted to our simulation platform. 
