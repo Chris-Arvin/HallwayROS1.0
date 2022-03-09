@@ -83,11 +83,23 @@ $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=2 robot_mode:=
 note: 
 * You can change the baseline in **move_base.launch**, please commen out and uncomment some lines as guidance.
 * Also, you can adapt your own algorithm in the format of the plugin. The details about the plugin can be found at [how to create a plugin](http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using%20a%20Simple%20Plugin)
+#### Case5: If you want to use our score tool, plese do not follow the Quick Start, but: 
+Please open a terminal to open the pedestrian simulation: 
+```
+$ source HallwayROS_ws/devel/setup.bash
+$ roslaunch score_tools start_motion_planning_and_score.launch
+```
+And open another terminal to open the navigation simulation: 
+```
+$ source HallwayROS_ws/devel/setup.bash
+$ roslaunch score_tools start_simulation_and_publish_goal.launch
+```
+
 
 ## 5. Instructions to DIY
 #### DIY for simulation environment
 We allow users to build its simulation environment in the format of xxx.xml. A reference xml file can be found at **Example_env.xml**. 
-Slam for the environment is not necessary, because we bridge the auto map-sending function. 
+Slam for the environment is unnecessary, because we bridge the auto map-sending function. 
 You can create obstacles in your .xml file like:
 ```
 <obstacle x1="1" y1="10" x2="5" y2="20" type="line">
@@ -97,10 +109,13 @@ And you can use your environment to change **scene_file** in **pedsim_simulator.
 
 #### Create a new recorded data
 Firstly, you should open the environment according to [Quick Start](#2-Quick-Start).
-Next, open another terminal to record the keyborad input:
+Next, open another terminal to record the keyborad input(we assume there are two people in the environment):
 ```
-$ rosbag record 
+$ rosbag record /people0/keyboard /people1/keyboard -o scene_file.bag
 ```
+note: please make sure to complete all the topic about the keyboard and replace "scene_file" with the name of your environment(such as bottleneck1). 
+
+When using the data replay, please change the **scene_file** in **pedsim_simulator.launch** and follow [Case2](#Case2-drive-the-person-with-data-replay)
 
 
 
@@ -118,4 +133,4 @@ $ rosbag record
 
 
 
-** We are so sorry: to avoid duplicate checks and data leakage, the whole work will be released after the paper is reviewed **
+**We are so sorry: to avoid duplicate checks and data leakage, the whole work will be released after the paper is reviewed.**
