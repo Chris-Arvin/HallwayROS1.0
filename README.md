@@ -75,10 +75,10 @@ $ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=1 robot_mode:=
 ```
 #### Case2: drive the person with data replay
 ```
-$ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=0 robot_mode:=2
+$ roslaunch pedsim_simulator pedsim_simulator.launch person_mode:=0 robot_mode:=2 scene_file:=twist1 log_file:=twist1-1
 ```
 note:
-* We provide 125 recorded data to help you test your algorithm. 
+* We provide 5x5x5 recorded data to help you test your algorithm. You should make sure the **scene_file** and **log_file** represents the same scene. 
 * You can easily create your own recorded data according to [Instructions to DIY](#5-Instructions to DIY)
 #### Case3: drive the robot with extended social force
 ```
