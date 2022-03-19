@@ -47,6 +47,7 @@ There will be an interface to help you control the pedestrians as well as the ro
 <div align=center>
 <img src="https://user-images.githubusercontent.com/36269534/157365577-70856fbb-ad9f-442b-a94f-005d3d043136.png" width="700"/>
 </div>
+[ A intuitive example of HallwayROS1.0: There are three persons belong to the same group shown with red circle. ]
 
 
 ## 3. Introduction for Key Parameters and Key Topics
