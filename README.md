@@ -116,11 +116,11 @@ And you can use your environment to change **scene_file** in **pedsim_simulator.
 
 #### Create a new recorded data
 Firstly, you should open the environment according to [Quick Start](#2-Quick-Start).
-Next, open another terminal to record the keyborad input(we assume there are two people in the environment):
+Next, open another terminal to record the person states:
 ```
-$ rosbag record /people0/keyboard /people1/keyboard -o scene_file.bag
+$ rosbag record /persons -o scene_file.bag
 ```
-note: please make sure to complete all the topic about the keyboard and replace "scene_file" with the name of your environment(such as bottleneck1). 
+note: please replace "scene_file" with the name of your environment(such as bottleneck1). 
 
 When using the data replay, please change the **scene_file** in **pedsim_simulator.launch** and follow [Case2](#Case2-drive-the-person-with-data-replay)
 
